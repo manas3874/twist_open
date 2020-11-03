@@ -1,0 +1,43 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  background-color: black;
+  padding: 7.5rem 0;
+  &--logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 65%;
+    }
+    .social-icons {
+      padding-top: 3rem;
+      img {
+        width: 30px;
+      }
+      width: 65%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &--nav {
+    p,
+    a {
+      color: whitesmoke;
+      text-decoration: none;
+      font-size: 5.5rem;
+      font-family: $fancy-font;
+      cursor: pointer;
+      letter-spacing: 0.2rem;
+      &:hover {
+        color: #ee236b;
+      }
+    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    transform: translateY(2rem);
+  }
+}
