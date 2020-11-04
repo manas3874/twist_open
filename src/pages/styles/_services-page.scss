@@ -1,4 +1,31 @@
 .services-page {
+  .rec-carousel {
+    button {
+      background-color: whitesmoke;
+    }
+    margin-bottom: 16rem;
+  }
+  .rec-pagination {
+    display: none;
+  }
+  &--banner {
+    background-color: black;
+    min-height: 90vh;
+    > img {
+      width: 80%;
+      margin-top: 7rem;
+    }
+    h2 {
+      color: whitesmoke;
+      font-size: 20rem;
+      font-family: $fancy-font;
+      text-align: right;
+      margin-top: -3rem;
+    }
+  }
+  &--slider {
+    background-color: black;
+  }
   &--business {
     background-color: black;
     &__row {
@@ -7,12 +34,56 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 3rem;
       padding: 0 6rem;
+      &:nth-child(4) {
+        div:last-child {
+          background-color: black;
+          border: 3px dashed white;
+          color: whitesmoke;
+        }
+      }
+    }
+    &__header {
+      font-family: $fancy-font;
+      margin: 0 0 8rem 6rem;
+      font-size: 7rem;
+      color: whitesmoke;
+    }
+  }
+  &--capabilities {
+    background-color: black;
+    padding: 20rem 0 15rem 0;
+    &__header {
+      font-family: $fancy-font;
+      margin: 0 0 8rem 6rem;
+      font-size: 7rem;
+      color: whitesmoke;
+    }
+    &__row {
+      padding: 3rem 13rem;
+      h2 {
+        color: whitesmoke;
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      img {
+        width: 15px;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
   &--clients {
-    background-color: whitesmoke;
+    padding: 2rem 12rem;
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
     justify-items: center;
+    &__header {
+      font-family: $fancy-font;
+      margin: 8rem 0 8rem 6rem;
+      font-size: 7rem;
+    }
   }
 }

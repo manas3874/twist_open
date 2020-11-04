@@ -1,0 +1,17 @@
+.client-card {
+  margin-top: 5rem;
+  &--header {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  &--img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: flex-start;
+    align-items: left;
+    img {
+      width: 90%;
+      margin: 3rem 0;
+    }
+  }
+}

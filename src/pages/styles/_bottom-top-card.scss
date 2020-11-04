@@ -15,4 +15,15 @@
     padding-top: 1.5rem;
     text-align: justify;
   }
+  &--btn {
+    border: none;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    padding: 2rem 4rem;
+    font-size: 3rem;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    margin-top: 4rem;
+  }
 }
