@@ -1,12 +1,18 @@
 .services-page {
-  background-color: black;
   &--business {
+    background-color: black;
     &__row {
-      margin: 0 auto;
+      margin: 3rem auto 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 4rem;
-      padding: 0 3rem;
+      grid-gap: 3rem;
+      padding: 0 6rem;
     }
+  }
+  &--clients {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
