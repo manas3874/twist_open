@@ -4,10 +4,12 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar--logo">
-        <img
-          src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f27dcf75c4db807583ae44c_logo.png"
-          alt=""
-        />
+        <Link to="/">
+          <img
+            src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f27dcf75c4db807583ae44c_logo.png"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="navbar--nav">
         <p className="navbar--nav__item">Home</p>

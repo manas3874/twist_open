@@ -1,0 +1,29 @@
+.welcome-homepage {
+  background-color: black;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  * {
+    color: whitesmoke;
+  }
+  &--header {
+    font-family: $fancy-font;
+    font-size: 20rem;
+  }
+  &--important {
+    color: #ee236b;
+    font-family: $fancy-font;
+  }
+  &--subheader-1 {
+    font-size: 4rem;
+  }
+  &--subheader-2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  &--subheader-3 {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+}
