@@ -6,4 +6,41 @@
   img {
     width: 80%;
   }
+  h2 {
+    font-family: $fancy-font;
+    font-size: 3rem;
+  }
+  &--description {
+    font-family: $main-font !important;
+    font-size: 2.5rem !important;
+    color: #ee236b;
+  }
+  h3 {
+    font-family: $fancy-font;
+    font-size: 7rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+  &--input {
+    outline: none;
+    border: none;
+    color: slategray;
+    padding: 1.5rem 7rem;
+    border: 1px solid rgb(36, 110, 247);
+    font-size: 3rem;
+    &::placeholder {
+      font-size: 3rem;
+      color: lightgrey;
+    }
+  }
+  &--btn {
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: #ee236b;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
 }
