@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 
+// ! props -- header, header color, text, imageSource
 class TopBottomCard extends Component {
   render() {
     return (
       <div className="top-bottom-card">
-        <h2>Header</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsam
-          ad quis facere quisquam quo aliquid ducimus cupiditate sit deserunt!
-        </p>
+        <h2
+          className="top-bottom-card--header"
+          style={{ color: `#${this.props.color}` }}
+        >
+          {this.props.header}
+        </h2>
+        <p className="top-bottom-card--text">{this.props.text}</p>
         <img
-          src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f2bb410e11b968ce7e65bfc_ux%20research%20(1).png"
+          src={this.props.imageSource}
           alt=""
+          className="top-bottom-card--img"
         />
       </div>
     );
