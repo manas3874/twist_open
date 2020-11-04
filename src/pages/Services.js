@@ -4,17 +4,50 @@ import Footer from "./components/Footer";
 import BottomTopCard from "./components/BottomTopCard";
 import TopBottomCard from "./components/TopBottomCard";
 import ClientCard from "./components/ClientCard";
+import Carousel from "react-elastic-carousel";
+import Item from "./components/Item";
 class Services extends Component {
   render() {
+    const breakPoints = [
+      { width: 1, itemsToShow: 1 },
+      // { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+      // { width: 768, itemsToShow: 3 },
+      // { width: 1200, itemsToShow: 4 },
+    ];
     return (
       <div className="services-page">
         <div className="services-page--banner">
           <Navbar />
-          <img src="" alt="" />
-          <h2>our labour</h2>
+          <img
+            src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c5bf157dda0_How%20can%20we%20dektop.png"
+            alt=""
+          />
+          <h2>help you?</h2>
         </div>
-        <div className="services-page--slider"></div>
+        <div className="services-page--slider">
+          <Carousel breakPoints={breakPoints}>
+            <Item style={{ backgroundColor: "#0081ff" }}>
+              I am building a product from scratch.
+            </Item>
+            <Item style={{ backgroundColor: "#ff811d" }}>
+              My existing product needs additional features.
+            </Item>
+            <Item style={{ backgroundColor: "#ffc72a" }}>
+              I want to understand my target users better.
+            </Item>
+            <Item style={{ backgroundColor: "#1fb58d" }}>
+              My product needs a facelift.
+            </Item>
+            <Item style={{ backgroundColor: "#ee236b" }}>
+              I need to augment my internal design team.
+            </Item>
+          </Carousel>
+        </div>
+
         <div className="services-page--business">
+          <h2 className="services-page--business__header">
+            Business Offerings
+          </h2>
           <div className="services-page--business__row">
             <BottomTopCard
               header="UX Audit"
@@ -68,7 +101,12 @@ class Services extends Component {
               color="3d9eff"
               imageSource="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f2bb405b5ddee51767affe0_intranet%20interfaces.png"
             />
-            <TopBottomCard header="" text="" color="" imageSource="" />
+            <BottomTopCard
+              header="Is there anything else we can help you with?"
+              text=""
+              color=""
+              imageSource="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f2babcc4c1f4327d4100a1e_question%20mark%20(1).png"
+            />
           </div>
           <div className="services-page--business__row">
             <BottomTopCard
@@ -91,7 +129,72 @@ class Services extends Component {
             />
           </div>
         </div>
-        <div className="services-page--capabilities"></div>
+        <div className="services-page--capabilities">
+          <h2 className="services-page--capabilities__header">Capabilities</h2>
+          <div className="services-page--capabilities__row">
+            <h2>User Research</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c75bd57dde1_green%20dot.png"
+              alt=""
+            />
+            <h2>UX Strategy & Design</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c2d8157dde2_orange%20dot.png"
+              alt=""
+            />
+            <h2>Competitor Analysis</h2>
+          </div>
+          <div className="services-page--capabilities__row">
+            <h2>Usability Testing</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c799957dde3_blue%20dot.png"
+              alt=""
+            />
+            <h2>Visual Design</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206cb13557dde4_yellow%20dot.png"
+              alt=""
+            />
+            <h2>Service Design</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c1b1d57dde5_pink%20dot.png"
+              alt=""
+            />
+            <h2>Branding</h2>
+          </div>
+          <div className="services-page--capabilities__row">
+            <h2>Motion Design</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c2d8157dde2_orange%20dot.png"
+              alt=""
+            />
+            <h2>Single Feature Revamp</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c799957dde3_blue%20dot.png"
+              alt=""
+            />
+            <h2>Corporate Website</h2>
+          </div>
+          <div className="services-page--capabilities__row">
+            <h2>Graphic Design</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c1b1d57dde5_pink%20dot.png"
+              alt=""
+            />
+            <h2>Content Strategy</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c75bd57dde1_green%20dot.png"
+              alt=""
+            />
+            <h2>Usability Audit</h2>
+            <img
+              src="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f24ee1393206c2d8157dde2_orange%20dot.png"
+              alt=""
+            />
+            <h2>Illustration</h2>
+          </div>
+        </div>
+        <h2 className="services-page--clients__header">Clients</h2>
         <div className="services-page--clients">
           <ClientCard
             header="FINTECH & BANKING"
@@ -111,10 +214,42 @@ class Services extends Component {
             image_5=""
             image_6=""
           />
-          {/* <ClientCard />
-          <ClientCard />
-          <ClientCard />
-          <ClientCard /> */}
+          <ClientCard
+            header="SOCIAL IMPACT"
+            image_1="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf3105fd0264f611222_villgro-min.jpg"
+            image_2="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf0dc40b4b3df24604b_Azim%20premji-min.jpg"
+            image_3="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf1eadeb3dfd2154903_Law%20and%20policy-min.jpg"
+            image_4="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf27b5f573360a39eb4_swasti-min.jpg"
+            image_5="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf12a7579b529cc946e_khpt-min.jpg"
+            image_6="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf18fa5cb542078f418_gram%20vikas-min.jpg"
+          />
+          <ClientCard
+            header="EDUCATION"
+            image_1="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf1e8e7462230747ad7_manipal%20hospitals-min.jpg"
+            image_2="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf151b51a6ce1efa609_oxford-min.jpg"
+            image_3="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abef32b3f1b609867cee_blackboard%20radio-min.jpg"
+            image_4=""
+            image_5=""
+            image_6=""
+          />
+          <ClientCard
+            header="ENTERTAINMENT"
+            image_1="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf2105fd0cb12611221_star%20sports-min.jpg"
+            image_2="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf3a35a9c249734cc45_v%20channel-min.jpg"
+            image_3="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf18fa5cbed4978f419_miss%20malini-min.jpg"
+            image_4=""
+            image_5=""
+            image_6=""
+          />
+          <ClientCard
+            header="TELECOM"
+            image_1="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf3105fd00099611223_verizon-min.jpg"
+            image_2="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f33abf0bfcb097deac3536d_globe-min.jpg"
+            image_3=""
+            image_4=""
+            image_5=""
+            image_6=""
+          />
         </div>
         <Footer />
       </div>

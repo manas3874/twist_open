@@ -16,7 +16,12 @@ class BottomTopCard extends Component {
         >
           {this.props.header}
         </h2>
-        <p className="bottom-top-card--text">{this.props.text}</p>
+
+        {this.props.text ? (
+          <p className="bottom-top-card--text">{this.props.text}</p>
+        ) : (
+          <button className="bottom-top-card--btn">Contact</button>
+        )}
       </div>
     );
   }
