@@ -8,13 +8,17 @@
       margin-top: 10rem;
       width: 80%;
     }
+    position: relative;
+    overflow-x: hidden;
     h2 {
       color: whitesmoke;
       font-family: $fancy-font;
-      font-size: 20rem;
+      font-size: 21rem;
       text-align: right;
-      transform: translateX(2rem);
-      
+      position: absolute;
+      bottom: 11rem;
+
+      right: -2rem;
     }
   }
 
