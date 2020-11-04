@@ -117,11 +117,7 @@ class Work extends Component {
               header="The CORE project"
               description="Promotional Website"
             />
-            <WorkCardLarge
-              source="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f621bdfa6ebd53c89fb18ab_Cross%20Device%20Experience.png"
-              header="large left header"
-              description="large description"
-            />
+            <WorkCardLarge source="" header="" description="" />
             <WorkCardSmall
               source="https://uploads-ssl.webflow.com/5f24ee1393206c44cc57dcb0/5f623e834d5916a2ec4dda73_Stay%20Relevant.png"
               header="How communication comes alive on a website"

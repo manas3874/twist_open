@@ -27,6 +27,19 @@
     flex-direction: column;
     align-items: center;
     padding: 5rem 0;
+    .work-page--row:last-child {
+      div:last-child {
+        .work-card-small__header {
+          font-family: $fancy-font !important;
+          text-align: center;
+        }
+        .work-card-small__description {
+          text-align: center;
+          color: #ee236b;
+          font-weight: 800 !important;
+        }
+      }
+    }
   }
   &--row {
     display: grid;
