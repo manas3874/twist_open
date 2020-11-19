@@ -13,7 +13,7 @@ class Homepage extends Component {
             target="_blank"
             className="welcome-homepage--important"
           >
-            twistopen.com
+            twistopen.in
           </Link>
         </h3>
         <h2 className="welcome-homepage--subheader-2">
